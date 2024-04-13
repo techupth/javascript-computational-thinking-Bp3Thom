@@ -81,4 +81,17 @@ let orders = [
   },
 ];
 
-// Start coding here
+let rearrange;
+function seperate(arrayTotal){
+  let total = [];
+  for (let i=0; i < arrayTotal.length; i++){
+  total.push(orders[i].productPrice*orders[i].productQuantity); 
+  }
+  return total;
+}
+rearrange = seperate(orders);
+let totalAmount = 0;
+for(let i = 0; i < rearrange.length; i++){
+  totalAmount = totalAmount + rearrange[i] 
+}
+console.log(`Total amount of the orders: ${totalAmount} Baht`)
